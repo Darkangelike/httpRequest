@@ -1,9 +1,27 @@
-<form>
-  <input type="radio" id="region" [(ngModel)]="FrenchRegions" name="type" />
+<form (ngSubmit)="(submittedForm)">
+  <input
+    type="radio"
+    id="region"
+    [(ngModel)]="FrenchRegions"
+    name="type"
+    value="region"
+  />
   <label for="region">Région</label>
-  <input type="radio" id="department" name="type" />
+  <input
+    type="radio"
+    id="department"
+    name="type"
+    [(ngModel)]="FrenchDepartments"
+    value="department"
+  />
   <label for="department">Département</label>
-  <input type="radio" id="commune" name="type" />
+  <input
+    type="radio"
+    id="commune"
+    name="type"
+    [(ngModel)]="FrenchCommunes"
+    value="commune"
+  />
   <label for="commune">Commune</label>
   <input type="text" id="name" />
   <label for="name">Name</label>
@@ -11,3 +29,5 @@
   <label for="code">Code</label>
   <input type="submit" value="Rechercher" />
 </form>
+
+<div></div>
